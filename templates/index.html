@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Predicción</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  
+
+    <!-- Mostrar la salida del notebook -->
+    <h2>Salida del Notebook</h2>
+    <div>
+        {{ notebook_output|safe }}
+    </div>
+     <!-- Mostrar el gráfico de predicción -->
+     <img src="{{ plot_url }}" alt="Resultados de Predicción">
+
+    <!-- Botón para recargar -->
+    <a href="{{ url_for('index') }}">Recargar</a>
+      <h1>Resultados de la Predicción</h1>
+
+   
+</body>
+</html>
